@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories Page</title>
+<body>
+    <div class="categories-container">
+        <div class="btn-box">
+            <a href="retailers.html">Retailer</a>
+        </div>
+        <div class="btn-box">
+            <a href="stockist.html">Stockist</a>
+        </div>
+        <div class="btn-box">
+            <a href="DISTRIBUTOR.HTML">Distributor</a>
+        </div>
+        <div class="btn-box">
+            <a href="cfa.html">CFA</a>
+        </div>
+    </div>
+    </body>
+<style>
+    :root{
+    --bg-color: #fefefe;
+    --second-bg-color: #9dabaf;
+    --text-color: #000000;
+    --main-color: #2da95c;
+}
+
+ .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: #2da95c;
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.9rem;
+    color: var(--second-bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+    color: #fFC9BB;
+}
+
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before{
+      background: var(--main-color);
+}
+
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+  h2 {
+    margin-top: 10px;
+    color: #333;
+  }
+</style>
+</head>
+
+</html>

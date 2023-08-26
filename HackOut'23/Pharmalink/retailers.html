@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retailer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Retailer Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="section news">
+            <h2>Local Pharma News</h2>
+            <ul>
+                <li><a href="#">News Article 1</a></li>
+                <li><a href="#">News Article 2</a></li>
+                <li><a href="#">News Article 3</a></li>
+            </ul>
+        </div>
+
+        <div class="section stock">
+            <h2>Stock Data</h2>
+            <p>Stock data visualization goes here.</p>
+        </div>
+
+        <div class="section search">
+            <h2>Search Bar</h2>
+            <input type="text" placeholder="Search products...">
+            <button class="button">Search</button>
+        </div>
+
+        <div class="section order">
+            <h2>Order Tracker</h2>
+            <p>Your order tracking details go here.</p>
+        </div>
+
+        <div class="section settings">
+            <h2>Minimum Unit Setting</h2>
+            <p>Configure the minimum units for products.</p>
+            <input type="number" placeholder="Enter minimum units">
+            <button class="button">Save</button>
+        </div>
+    </div>
+</body>
+</html>
