@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  /* Your CSS styling here */
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="category">Select Category:</label>
+          <select id="category" name="category">
+            <option value="retailers">Retailers</option>
+            <option value="stockist">Stockist</option>
+            <option value="distributors">Distributors</option>
+            <option value="cfa">CFA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="login()">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var category = document.getElementById("category").value;
+      var filePath = getFilePath(category);
+      if (filePath) {
+        window.location.href = filePath;
+      } else {
+        alert("Please select a valid category.");
+      }
+    }
+
+    function getFilePath(category) {
+      switch (category) {
+        case "retailers":
+          return "/login.html";
+        case "stockist":
+          return "path_to_stockist_file.html";
+        case "distributors":
+          return "path_to_distributors_file.html";
+        case "cfa":
+          return "path_to_cfa_file.html";
+        default:
+          return null;
+      }
+    }
+  </script>
+</body>
+</html>
